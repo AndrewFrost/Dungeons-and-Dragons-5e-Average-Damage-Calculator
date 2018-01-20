@@ -1,0 +1,1219 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset = "utf-8">
+		<style>
+			html
+			{
+				background-attachment: fixed;
+				background-size: cover;
+				background-repeat: no-repeat; 
+				background-color: black;
+			}
+
+			table
+			{
+				border-collapse: collapse;
+			}
+
+			th
+			{
+				white-space: normal;
+				border: 1px solid black;
+				width: 100px;
+				max-width: 100px;
+				height: 72px;
+				background-color: rgba(187, 187, 187, .6666666667);
+			}
+
+			td
+			{
+				border: 1px solid black;
+			}
+
+			.heading_Target_AC_Type_0
+			{
+				width: 409px;
+				max-width: 409px;
+			}
+
+			.heading_Target_AC_Type_1
+			{
+				width: 306px;
+				max-width: 306px;
+			}
+
+			.heading_Target_AC_Type_2
+			{
+				width: 203px;
+				max-width: 203px;
+			}
+
+			.heading_Target_AC_Type_3
+			{
+				width: 100px;
+				max-width: 100px;
+			}
+
+			.target_AC_Odd
+			{
+				text-align: center;
+				background-color: rgba(255, 255, 255, .6666666667);
+			}
+
+			.target_AC_Even
+			{
+				text-align: center;
+				background-color: rgba(204, 204, 204, .6666666667);
+			}
+
+			.disadvantage_Attack_Data_Odd
+			{
+				background-color: rgba(255, 0, 0, .6666666667);
+			}
+
+			.disadvantage_Attack_Data_Even
+			{
+				background-color: rgba(204, 0, 0, .6666666667);
+			}
+
+			.regular_Attack_Data_Odd
+			{
+				background-color: rgba(255, 255, 0, .6666666667);
+			}
+
+			.regular_Attack_Data_Even
+			{
+				background-color: rgba(204, 204, 0, .6666666667);
+			}
+
+			.advantage_Attack_Data_Odd
+			{
+				background-color: rgba(0, 255, 0, .6666666667);
+			}
+
+			.advantage_Attack_Data_Even
+			{
+				background-color: rgba(0,204,00, .6666666667);
+			}
+
+			.table_Title_Container
+			{
+				text-align: center;
+			}
+
+			.table_Title
+			{
+				white-space: nowrap;
+				border-radius: 4px;
+				padding-left: 5px;
+				padding-right: 5px;
+				background-color: rgba(255, 255, 255, 0.5);
+			}
+
+			.input_Descriptor
+			{
+				display: inline-block;
+				white-space: nowrap;
+				border-radius: 4px;
+				padding-left: 5px;
+				width: 206px;
+				max-width: 206px;
+				background-color: rgba(255, 255, 255, 0.5);
+			}
+
+			.input_Text_Box
+			{
+				margin: 1px 0px;
+				border: 1px solid black;
+				padding: 0px;
+				width: 102px;
+				max-width: 102px;
+				height: 16px;
+			}
+
+			.input_Number_Box
+			{
+				margin: 1px 0px;
+				border: 1px solid black;
+				padding: 0px;
+				width: 102px;
+				max-width: 102px;
+				height: 16px;
+			}
+
+			.input_Checkbox
+			{
+				margin: 1px 0px;
+				padding-left: 0px;
+				padding-right: 0px;
+				width: 104px;
+				max-width: 104px;
+				height: 14px;
+			}
+
+			.remove_Table_Button
+			{
+				margin-top: 1px;
+				margin-bottom: 1px;
+				border: 1px solid black;
+				border-radius: 4px;
+				height: 20px;
+				width: 104px;
+				max-width: 104px;
+			}
+
+			.save_Table_Button
+			{
+				margin-top: 1px;
+				margin-bottom: 1px;
+				border: 1px solid black;
+				border-radius: 4px;
+				height: 18px;
+				width: 104px;
+				max-width: 104px;
+			}
+
+			.full_Table
+			{
+				float: left;
+				max-width: 413px;
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+
+			.saved_Entries_Drop_Down_List_Description
+			{
+				white-space: nowrap;
+				display: inline-block;
+				margin-top: 1px;
+				padding-left: 5px;
+				margin-bottom: 1px;
+				border-radius: 4px;
+				width: 110px;
+				max-width: 110px;
+				background-color: rgba(255, 255, 255, 0.5);
+			}
+
+			.drop_Down_List
+			{
+				margin: 0px;
+				padding: 0px;
+				min-width: 150px;
+				max-width: 538px;
+				height: 20px;
+			}
+
+			.drop_Down_List_Button
+			{
+				margin-top: 1px;
+				margin-bottom: 1px;
+				border: 1px solid black;
+				border-radius: 4px;
+				width: 150px;
+				max-width: 150px;
+				height: 20px;
+			}
+
+			.other_Button
+			{
+				margin-top: 1px;
+				margin-bottom: 1px;
+				margin-right: 1px;
+				border: 1px solid black;
+				border-radius: 4px;
+				width: 206px;
+				max-width: 206px;
+				height: 20px;
+			}
+
+			.universal_Display_Options_Holder
+			{
+				background-color: rgba(0, 0, 0, 0.5);
+				height: 132px;
+				width: 413px;
+				max-width: 413px;
+				float: left;
+				display: inline-block;
+			}
+
+			.drop_Down_Menu_Holder
+			{
+				background-color: rgba(0, 0, 0, 0.5);
+				height: 132px;
+				display: inline-block;
+			}
+
+			#table_Holder
+			{
+				display: inline-block;
+			}
+
+			#damage_Table
+			{
+				display: inline-block;
+				white-space: nowrap;
+				border-radius: 4px;
+				padding-left: 5px;
+				padding-right: 5px;
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+
+			#damage_Table tr td	/*The data entries inside of the damage table*/
+			{
+				text-align: center;
+				height: 72px;
+				background-color: rgba(0, 255, 255, .6666666667);
+			}
+
+			#damage_Table .input_Number_Box
+			{
+				width: 36px;
+			}
+
+			#damage_Table tr td:first-child	/*The first data entry inside of the damage table*/
+			{
+				background-color: rgba(255, 255, 255, .6666666667);
+			}
+
+			#damage_Table tr td:nth-last-child(2), #damage_Table tr td:last-child	/*The last two data entries inside of the damage table*/
+			{
+				background-color: rgba(0, 255, 0, .6666666667);
+			}
+		</style>
+	</head>
+	<body onload = "initialize_Page()">
+		<div>
+			<div>
+				<span class = "universal_Display_Options_Holder">
+					<div>
+						<span class = "input_Descriptor">Target AC Minimum: </span><input class = "input_Number_Box" type = "number" step = "1" value = 13 onchange = "populate_All_Tables()" id = "target_AC_Minimum_Input">
+					</div>
+					<div>
+						<span class = "input_Descriptor">Target AC Maximum: </span><input class = "input_Number_Box" type = "number" step = "1" value = 22 onchange = "populate_All_Tables()" id = "target_AC_Maximum_Input">
+					</div>
+					<div>
+						<span class = "input_Descriptor">Display Disadvantage: </span><input class = "input_Checkbox" type = "checkbox" onkeypress = "key_Pressed_On_Checkbox(event, this)" onchange = "populate_All_Tables()" checked id = "display_Disadvantage_Checkbox">
+					</div>
+					<div>
+						<span class = "input_Descriptor">Display Regular: </span><input class = "input_Checkbox" type = "checkbox" onkeypress = "key_Pressed_On_Checkbox(event, this)" onchange = "populate_All_Tables()" checked id = "display_Regular_Checkbox">
+					</div>
+					<div>
+						<span class = "input_Descriptor">Display Advantage: </span><input class = "input_Checkbox" type = "checkbox" onkeypress = "key_Pressed_On_Checkbox(event, this)" onchange = "populate_All_Tables()" checked id = "display_Advantage_Checkbox">
+					</div>
+				</span>
+				<span class = "drop_Down_Menu_Holder">
+					<div>
+						<span class = "saved_Entries_Drop_Down_List_Description">Saved Entries: </span><select class = "drop_Down_List" id = "saved_Entries_Drop_Down_List"></select>
+					</div>
+					<div>
+						<input class = "drop_Down_List_Button" type = "button" value = "Add Selected Table" onclick = "load_From_Local_Storage()">
+					</div>
+					<div>
+						<input class = "drop_Down_List_Button" type = "button" value = "Delete Selected Entry" onclick = "delete_From_Local_Storage()"><br>
+					</div>
+					<br>
+					<div>
+						<span class = "saved_Entries_Drop_Down_List_Description">Example Tables: </span><select class = "drop_Down_List" id = "example_Tables_Drop_Down_List">
+							<option value = "">Select...</option>
+							<option value = '["Greatsword","",1,5,0,10,10,17,17,1,"","",""]'>Greatsword, 16 Strength 2 Proficiency</option>
+							<option value = '["Greataxe","",1,5,0,9.5,9.5,16,16,1,"","",""]'>Greataxe, 16 Strength 2 Proficiency</option>
+							<option value = '["Greatsword GWF","",1,5,0,11.3333,11.3333,19.6667,19.6667,1,"","",""]'>Greatsword, 16 Strength 2 Proficiency - Great Weapon Fighting</option>
+							<option value = '["Greataxe GWF","",1,5,0,10.3333,10.3333,17.6666,17.6666,1,"","",""]'>Greataxe, 16 Strength 2 Proficiency - Great Weapon Fighting</option>
+							<option value = '["Halforc +3 Greataxe","",4,14,0,14.5,14.5,27.5,27.5,3,"","",""]'>+3 Greataxe Champion 20 Halforc, 20 Strength 6 Proficiency</option>
+							<option value = '["Halforc +3 Greataxe GWF","",4,14,0,15.3333,15.3333,30,30,3,"","",""]'>+3 Greataxe Champion 20 Halforc, 20 Strength 6 Proficiency - Great Weapon Fighting</option>
+							<option value = '["Halforc +3 Greatsword","",4,14,0,15,15,25.5,25.5,3,"","",""]'>+3 Greatsword Champion 20 Halforc, 20 Strength 6 Proficiency</option>
+							<option value = '["Halforc +3 Greatsword GWF","",4,14,0,16.3333,16.3333,28.8333,28.8333,3,"","",""]'>+3 Greatsword Champion 20 Halforc, 20 Strength 6 Proficiency - Great Weapon Fighting</option>
+						</select>
+					</div>
+					<div>
+						<input class = "drop_Down_List_Button" type = "button" value = "Create Example Table" onclick = "generate_Example_Table()"><br>
+					</div>
+				</span>
+			</div>
+			<div>
+				<input class = "other_Button" type = "button" value = "Create New Table" onclick = "generate_New_Input()"><input class = "other_Button" type = "button" value = "Remove Last Table" onclick = "remove_Table('Last')">
+			</div>
+		</div>
+		<br>
+		<div id = "table_Holder">
+		</div>
+		<div>
+			<br>
+			<table id = "damage_Table">
+				<caption class = "table_Title_Container">
+					<span class = "table_Title">
+						Weapon Damage Table
+					</span>
+				</caption>
+				<tr>
+					<th  style = "text-align: right" >
+						Great Weapon Master: <input style = "float: right"  type = "radio" name = "damage_Table_Damage_Selection_Radio_Button_Group" onkeypress = "key_Pressed_On_Checkbox(event, this)" onchange = "update_Damage_Table()" id = "damage_Table_Great_Weapon_Master_Radio_Button">
+						<br>
+						Elemental Adept: <input style = "float: right" type = "radio" name = "damage_Table_Damage_Selection_Radio_Button_Group" onkeypress = "key_Pressed_On_Checkbox(event, this)" onchange = "update_Damage_Table()" id = "damage_Table_Elemental_Adept_Radio_Button">
+						<br>
+						None: <input style = "float: right"  type = "radio" name = "damage_Table_Damage_Selection_Radio_Button_Group" onkeypress = "key_Pressed_On_Checkbox(event, this)" onchange = "update_Damage_Table()" checked>
+					</th>
+					<th>
+						<input class = "input_Number_Box" type = "number" step = "1" value = 0 onchange = "update_Damage_Table()" id = "damage_Table_D4_Input_Box">
+						<br>
+						D4
+					</th>
+					<th>
+						<input class = "input_Number_Box" type = "number" step = "1" value = 0 onchange = "update_Damage_Table()" id = "damage_Table_D6_Input_Box">
+						<br>
+						D6
+					</th>
+					<th>
+						<input class = "input_Number_Box" type = "number" step = "1" value = 0 onchange = "update_Damage_Table()" id = "damage_Table_D8_Input_Box">
+						<br>
+						D8
+					</th>
+					<th>
+						<input class = "input_Number_Box" type = "number" step = "1" value = 0 onchange = "update_Damage_Table()" id = "damage_Table_D10_Input_Box">
+						<br>
+						D10
+					</th>
+					<th>
+						<input class = "input_Number_Box" type = "number" step = "1" value = 0 onchange = "update_Damage_Table()" id = "damage_Table_D12_Input_Box">
+						<br>
+						D12
+					</th>
+					<th>
+						<input class = "input_Number_Box" type = "number" step = "1" value = 0 onchange = "update_Damage_Table()" id = "damage_Table_Damage_Modifier_Input_Box">
+						<br>
+						+ Modifier
+					</th>
+					<th>
+						<input class = "input_Number_Box" type = "number" step = "any" value = 0 onchange = "update_Damage_Table()" id = "damage_Table_Extra_Critical_Damage_Input_Box">
+						<br>
+						Critical Bonus
+					</th>
+					<th>
+						Total Average Damage - Regular Hit
+					</th>
+					<th>
+						Total Average Damage - Critical Hit
+					</th>
+				</tr>
+				<tr>
+					<td>
+						Average Damage Contribution:
+					</td>
+					<td id = "damage_Table_D4_Average_Damage_Contribution">
+						0
+					</td>
+					<td id = "damage_Table_D6_Average_Damage_Contribution">
+						0
+					</td>
+					<td id = "damage_Table_D8_Average_Damage_Contribution">
+						0
+					</td>
+					<td id = "damage_Table_D10_Average_Damage_Contribution">
+						0
+					</td>
+					<td id = "damage_Table_D12_Average_Damage_Contribution">
+						0
+					</td>
+					<td id = "damage_Table_Damage_Modifier_Contribution">
+						0
+					</td>
+					<td id = "damage_Table_Extra_Critical_Damage_Contribution">
+						0
+					</td>
+					<td id = "damage_Table_Total_Average_Damage_Regular_Hit">
+						0
+					</td>
+					<td id = "damage_Table_Total_Average_Damage_Critical_Hit">
+						0
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<script type="text/javascript">
+			//To do: Add more options to the list for common builds
+			var target_AC_Minimum_Element = document.getElementById("target_AC_Minimum_Input");
+			var target_AC_Maximum_Element = document.getElementById("target_AC_Maximum_Input");
+			var display_Disadvantage_Element = document.getElementById("display_Disadvantage_Checkbox");
+			var display_Regular_Element = document.getElementById("display_Regular_Checkbox");
+			var display_Advantage_Element = document.getElementById("display_Advantage_Checkbox");
+
+			var target_AC_Minimum = Math.ceil(Number(target_AC_Minimum_Element.value));	//Universal table display options, updates values at the beginning of populate_All_Tables(), and initialize_Page()
+			var target_AC_Maximum = Math.floor(Number(target_AC_Maximum_Element.value));
+			var display_Disadvantage = display_Disadvantage_Element.checked;
+			var display_Regular = display_Regular_Element.checked;
+			var display_Advantage = display_Advantage_Element.checked;
+
+			var use_Advanced_Options = false;			//Individual table input values, updates in populate_Table(display_Table_Number)
+			var number_Of_Attacks_In_Sequence = 0;
+			var attack_Modifier = 0;
+			var average_Damage_Miss = 0;
+			var average_Damage_Regular_Hit = 0;
+			var average_Damage_First_Hit_Regular = 0;
+			var average_Damage_Critical_Hit = 0;
+			var average_Damage_First_Hit_Critical = 0;
+			var minimum_Roll_Needed_For_Critical = 21;		//Minimum roll needed to be a critical, 21 if impossible, 1 if everything is a critical
+			var blessed_Attack = false;
+			var halfling_Lucky_Trait_Probabilities_Array_Modifier = 0;		//Used to access the halfling probabilities in the array
+			var elven_Accuracy_Feat_Probabilities_Array_Modifier = 0;		//Only add to advantage damage calculation calls
+
+			//Damage Table Variables
+			var damage_Table_Great_Weapon_Master_Radio_Button_Element = document.getElementById("damage_Table_Great_Weapon_Master_Radio_Button");
+			var damage_Table_Elemental_Adept_Radio_Button_Element = document.getElementById("damage_Table_Elemental_Adept_Radio_Button");
+			var damage_Table_D4_Input_Box_Element = document.getElementById("damage_Table_D4_Input_Box");
+			var damage_Table_D4_Average_Damage_Contribution_Element = document.getElementById("damage_Table_D4_Average_Damage_Contribution");
+			var damage_Table_D6_Input_Box_Element = document.getElementById("damage_Table_D6_Input_Box");
+			var damage_Table_D6_Average_Damage_Contribution_Element = document.getElementById("damage_Table_D6_Average_Damage_Contribution");
+			var damage_Table_D8_Input_Box_Element = document.getElementById("damage_Table_D8_Input_Box");
+			var damage_Table_D8_Average_Damage_Contribution_Element = document.getElementById("damage_Table_D8_Average_Damage_Contribution");
+			var damage_Table_D10_Input_Box_Element = document.getElementById("damage_Table_D10_Input_Box");
+			var damage_Table_D10_Average_Damage_Contribution_Element = document.getElementById("damage_Table_D10_Average_Damage_Contribution");
+			var damage_Table_D12_Input_Box_Element = document.getElementById("damage_Table_D12_Input_Box");
+			var damage_Table_D12_Average_Damage_Contribution_Element = document.getElementById("damage_Table_D12_Average_Damage_Contribution");
+			var damage_Table_Damage_Modifer_Input_Box_Element = document.getElementById("damage_Table_Damage_Modifier_Input_Box");
+			var damage_Table_Damage_Modifier_Contribution_Element = document.getElementById("damage_Table_Damage_Modifier_Contribution");
+			var damage_Table_Extra_Critical_Damage_Input_Box_Element = document.getElementById("damage_Table_Extra_Critical_Damage_Input_Box");
+			var damage_Table_Extra_Critical_Damage_Contribution_Element = document.getElementById("damage_Table_Extra_Critical_Damage_Contribution");
+			var damage_Table_Total_Average_Damage_Regular_Hit_Element = document.getElementById("damage_Table_Total_Average_Damage_Regular_Hit");
+			var damage_Table_Total_Average_Damage_Critical_Hit_Element = document.getElementById("damage_Table_Total_Average_Damage_Critical_Hit");
+
+			function populate_Table(display_Table_Number)
+			{
+				var display_Table = document.getElementById("display_Table_Element_" + display_Table_Number);
+				while(display_Table.children[0] !== undefined)	//Destroys the old table
+				{
+					display_Table.removeChild(display_Table.lastChild);
+				}
+
+				var table_Headings = document.createElement("TR");	//Generates appropriate headings based on selected settings and table position
+				if(display_Table_Number === currently_Active_Tables[0])
+				{
+					var heading_Target_AC = document.createElement("TH");
+					heading_Target_AC.innerHTML = "Target AC";
+					var heading_Target_AC_Class_Type = 0;
+					if(display_Disadvantage === true)
+					{
+						heading_Target_AC_Class_Type = heading_Target_AC_Class_Type + 1;
+					}
+					if(display_Regular === true)
+					{
+						heading_Target_AC_Class_Type = heading_Target_AC_Class_Type + 1;
+					}
+					if(display_Advantage === true)
+					{
+						heading_Target_AC_Class_Type = heading_Target_AC_Class_Type + 1;
+					}
+					heading_Target_AC.className = "heading_Target_AC_Type_" + heading_Target_AC_Class_Type;
+					table_Headings.appendChild(heading_Target_AC);
+				}
+				if(display_Disadvantage === true)
+				{
+					var heading_Average_Damage_Per_Attack_Disadvantage = document.createElement("TH");
+					heading_Average_Damage_Per_Attack_Disadvantage.innerHTML = "Average Damage Per Round - Disadvantage";
+					table_Headings.appendChild(heading_Average_Damage_Per_Attack_Disadvantage);
+				}
+				if(display_Regular === true)
+				{
+					var heading_Average_Damager_Per_Attack_Regular = document.createElement("TH");
+					heading_Average_Damager_Per_Attack_Regular.innerHTML = "Average Damage Per Round - Regular";
+					table_Headings.appendChild(heading_Average_Damager_Per_Attack_Regular);
+				}
+				if(display_Advantage === true)
+				{
+					var heading_Average_Damage_Per_Attack_Advantage = document.createElement("TH");
+					heading_Average_Damage_Per_Attack_Advantage.innerHTML = "Average Damage Per Round - Advantage";
+					table_Headings.appendChild(heading_Average_Damage_Per_Attack_Advantage);
+				}
+				display_Table.appendChild(table_Headings);
+
+				use_Advanced_Options = document.getElementById("use_Advanced_Options_Checkbox_" + display_Table_Number).checked;				//When checked, may hide some values and use a default for them
+
+				number_Of_Attacks_In_Sequence = Math.min(Math.floor(Number(document.getElementById("number_Of_Attacks_In_Sequence_Input_" + display_Table_Number).value)), 18);
+				attack_Modifier = Math.floor(Number(document.getElementById("attack_Modifier_Input_" + display_Table_Number).value));			//Individual table input values
+				average_Damage_Miss = Number(document.getElementById("average_Damage_Miss_Input_" + display_Table_Number).value);															//Advanced Option, could be set to 0 and hidden
+				average_Damage_Regular_Hit = Number(document.getElementById("average_Damage_Regular_Hit_Input_" + display_Table_Number).value);
+				average_Damage_First_Hit_Regular = Number(document.getElementById("average_Damage_First_Hit_Regular_Input_" + display_Table_Number).value);									//Advanced Option, could be set to average_Damage_Regular_Hit and hidden
+				average_Damage_Critical_Hit = Number(document.getElementById("average_Damage_Critical_Hit_Input_" + display_Table_Number).value);
+				average_Damage_First_Hit_Critical = Number(document.getElementById("average_Damage_First_Hit_Critical_Input_" + display_Table_Number).value);								//Advanced Option, could be set to average_Damage_Critical_Hit and hidden
+				minimum_Roll_Needed_For_Critical = Math.max(1, 21 - Math.max(0, Math.floor(Number(document.getElementById("critical_Hit_Range_Input_" + display_Table_Number).value))));	//Advanced Option, could be set to 20 and hidden
+				blessed_Attack = document.getElementById("blessed_Attack_Checkbox_" + display_Table_Number).checked;																		//Advanced Option, could be set to false and element hidden
+				if(document.getElementById("halfling_Lucky_Trait_Checkbox_" + display_Table_Number).checked === true)																		//Advanced Option, modifier could be set to 0 and element hidden
+				{
+					halfling_Lucky_Trait_Probabilities_Array_Modifier = 4;
+				}
+				else
+				{
+					halfling_Lucky_Trait_Probabilities_Array_Modifier = 0;
+				}
+				if(document.getElementById("elven_Accuracy_Feat_Checkbox_" + display_Table_Number).checked === true)																		//Advanced Option, modifier could be set to 0 and element hidden
+				{
+					elven_Accuracy_Feat_Probabilities_Array_Modifier = 1;
+				}
+				else
+				{
+					elven_Accuracy_Feat_Probabilities_Array_Modifier = 0;
+				}
+
+				if(use_Advanced_Options === true)
+				{
+					document.getElementById("average_Damage_Miss_Input_" + display_Table_Number).style.visibility = "visible";
+					document.getElementById("average_Damage_First_Hit_Regular_Input_" + display_Table_Number).style.visibility = "visible";
+					document.getElementById("average_Damage_First_Hit_Critical_Input_" + display_Table_Number).style.visibility = "visible";
+					document.getElementById("critical_Hit_Range_Input_" + display_Table_Number).style.visibility = "visible";
+					document.getElementById("blessed_Attack_Checkbox_" + display_Table_Number).style.visibility = "visible";
+					document.getElementById("halfling_Lucky_Trait_Checkbox_" + display_Table_Number).style.visibility = "visible";
+					document.getElementById("elven_Accuracy_Feat_Checkbox_" + display_Table_Number).style.visibility = "visible";
+				}
+				else
+				{
+					average_Damage_Miss = 0;
+					average_Damage_First_Hit_Regular = average_Damage_Regular_Hit;
+					average_Damage_First_Hit_Critical = average_Damage_Critical_Hit;
+					minimum_Roll_Needed_For_Critical = 20;
+					blessed_Attack = false;
+					halfling_Lucky_Trait_Probabilities_Array_Modifier = 0;
+					elven_Accuracy_Feat_Probabilities_Array_Modifier = 0;
+					document.getElementById("average_Damage_Miss_Input_" + display_Table_Number).style.visibility = "hidden";
+					document.getElementById("average_Damage_First_Hit_Regular_Input_" + display_Table_Number).style.visibility = "hidden";
+					document.getElementById("average_Damage_First_Hit_Critical_Input_" + display_Table_Number).style.visibility = "hidden";
+					document.getElementById("critical_Hit_Range_Input_" + display_Table_Number).style.visibility = "hidden";
+					document.getElementById("blessed_Attack_Checkbox_" + display_Table_Number).style.visibility = "hidden";
+					document.getElementById("halfling_Lucky_Trait_Checkbox_" + display_Table_Number).style.visibility = "hidden";
+					document.getElementById("elven_Accuracy_Feat_Checkbox_" + display_Table_Number).style.visibility = "hidden";
+				}
+
+				var even_Or_Odd_Pass = "Even";	//Alternates between "Even" and "Odd" to apply CSS classes appropriate for the tables, will flip to Odd at the beginning
+				for(current_Target_AC = target_AC_Minimum; current_Target_AC <= target_AC_Maximum; current_Target_AC++)
+				{
+					if(even_Or_Odd_Pass === "Even")
+					{
+						even_Or_Odd_Pass = "Odd";
+					}
+					else
+					{
+						even_Or_Odd_Pass = "Even";
+					}
+
+					var table_Row = document.createElement("TR");			//The element for the current Table Row of the Table
+
+					if(display_Table_Number === currently_Active_Tables[0])	//Adds the Target AC Column to only the first table
+					{
+						var row_Target_AC = document.createElement("TD");	//The element for the current Table Data of the Row
+						row_Target_AC.innerHTML = current_Target_AC;
+						row_Target_AC.className = "target_AC_" + even_Or_Odd_Pass;
+						table_Row.appendChild(row_Target_AC);
+					}
+
+					if(display_Disadvantage === true)
+					{
+						var average_Damage_Per_Hit_Disadvantage = document.createElement("TD");
+						average_Damage_Per_Hit_Disadvantage.innerHTML = Math.round(calculate_Attack_Sequence(current_Target_AC, 0 + halfling_Lucky_Trait_Probabilities_Array_Modifier, number_Of_Attacks_In_Sequence) * 10000) / 10000;
+						average_Damage_Per_Hit_Disadvantage.className = "disadvantage_Attack_Data_" + even_Or_Odd_Pass;
+						table_Row.appendChild(average_Damage_Per_Hit_Disadvantage);
+					}
+
+					if(display_Regular === true)
+					{
+						var average_Damage_Per_Hit_Regular = document.createElement("TD");
+						average_Damage_Per_Hit_Regular.innerHTML = Math.round(calculate_Attack_Sequence(current_Target_AC, 1 + halfling_Lucky_Trait_Probabilities_Array_Modifier, number_Of_Attacks_In_Sequence) * 10000) / 10000;
+						average_Damage_Per_Hit_Regular.className = "regular_Attack_Data_" + even_Or_Odd_Pass;
+						table_Row.appendChild(average_Damage_Per_Hit_Regular);
+					}
+
+					if(display_Advantage === true)
+					{
+						var average_Damage_Per_Hit_Advantage = document.createElement("TD");
+						average_Damage_Per_Hit_Advantage.innerHTML = Math.round(calculate_Attack_Sequence(current_Target_AC, 2 + halfling_Lucky_Trait_Probabilities_Array_Modifier + elven_Accuracy_Feat_Probabilities_Array_Modifier, number_Of_Attacks_In_Sequence) * 10000) / 10000;
+						average_Damage_Per_Hit_Advantage.className = "advantage_Attack_Data_" + even_Or_Odd_Pass;
+						table_Row.appendChild(average_Damage_Per_Hit_Advantage);
+					}
+
+					display_Table.appendChild(table_Row);
+				}
+			}
+
+			var factorials_Array = [1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800, 39916800, 479001600, 6227020800, 87178291200, 1307674368000, 20922789888000, 355687428096000, 6402373705728000];	//Factorials for 0 to 18- range could be increased with negligible rounding errors if needed
+
+			var probabilities_Array_Of_Roll_Or_Higher =
+			[//[Disadvantage, Regular, Advantage, Elven Accuracy Advantage, Halfling Disadvantage, Halfling Regular, Halfling Advantage, Halfling Elven Accuracy]
+				[1.00,		1.00,	1.00,		1.00,		1.00,		1.00,		1.00,		1.00],			//0
+				[1.00,		1.00,	1.00,		1.00,		1.00,		1.00,		1.00,		1.00],			//1
+				[0.9025,	0.95,	0.9975,		0.999875,	0.99275,	0.9975,		0.999875,	0.99999375],	//2
+				[0.81,		0.90,	0.99,		0.999,		0.891,		0.945,		0.99675,	0.9997875],		//3
+				[0.7225,	0.85,	0.9775,		0.996625,	0.79475,	0.8925,		0.988125,	0.99864375],	//4
+				[0.64,		0.80,	0.96,		0.992,		0.704,		0.84,		0.974,		0.9957],		//5
+				[0.5625,	0.75,	0.9375,		0.984375,	0.61875,	0.7875,		0.954375,	0.99009375],	//6
+				[0.49,		0.70,	0.91,		0.973,		0.539,		0.735,		0.92925,	0.9809625],		//7
+				[0.4225,	0.65,	0.8775,		0.957125,	0.46475,	0.6825,		0.898625,	0.96744375],	//8
+				[0.36,		0.60,	0.84,		0.936,		0.396,		0.63,		0.8625,		0.948675],		//9
+				[0.3025,	0.55,	0.7975,		0.908875,	0.33275,	0.5775,		0.820875,	0.92379375],	//10
+				[0.25,		0.50,	0.75,		0.875,		0.275,		0.525,		0.77375,	0.8919375],		//11
+				[0.2025,	0.45,	0.6975,		0.833625,	0.22275,	0.4725,		0.721125,	0.85224375],	//12
+				[0.16,		0.40,	0.64,		0.784,		0.176,		0.42,		0.663,		0.80385],		//13
+				[0.1225,	0.35,	0.5775,		0.725375,	0.13475,	0.3675,		0.599375,	0.74589375],	//14
+				[0.09,		0.30,	0.51,		0.657,		0.099,		0.315,		0.53025,	0.6775125],		//15
+				[0.0625,	0.25,	0.4375,		0.578125,	0.06875,	0.2625,		0.455625,	0.59784375],	//16
+				[0.04,		0.20,	0.36,		0.488,		0.044,		0.21,		0.3755,		0.506025],		//17
+				[0.0225,	0.15,	0.2775,		0.385875,	0.02475,	0.1575,		0.289875,	0.40119375],	//18
+				[0.01,		0.10,	0.19,		0.271,		0.011,		0.105,		0.19875,	0.2824875],		//19
+				[0.0025,	0.05,	0.0975,		0.142625,	0.00275,	0.0525,		0.102125,	0.14904375],	//20
+				[0.00,		0.00,	0.00,		0.00,		0.00,		0.00,		0.00,		0.00]			//21
+			];
+
+			function calculate_Attack_Sequence(current_Target_AC, probability_Type, number_Of_Attacks_In_Sequence)
+			{
+				var minimum_Rolls_Needed_For_Hit = [21, 21, 21, 21, 21];	//Normal, Bless rolling 1, 2, 3, or 4
+				var chance_To_Critical = probabilities_Array_Of_Roll_Or_Higher[minimum_Roll_Needed_For_Critical][probability_Type];
+				var chance_To_Regular_Hit = 0;
+
+				if(blessed_Attack === false)
+				{
+					minimum_Rolls_Needed_For_Hit[0] = Math.min(minimum_Roll_Needed_For_Critical, Math.max(2, current_Target_AC - attack_Modifier)); //Minimum roll needed to land a hit, minimum of 2 and maximum the minimum needed for a critical
+					chance_To_Regular_Hit = probabilities_Array_Of_Roll_Or_Higher[minimum_Rolls_Needed_For_Hit[0]][probability_Type] - chance_To_Critical;
+				}
+				else	//Blessed adds a 1d4 to the attack modifier and the chance to regular hit is the averaged chance to hit of the 4 blessed probablities
+				{
+					minimum_Rolls_Needed_For_Hit[1] = Math.min(minimum_Roll_Needed_For_Critical, Math.max(2, (current_Target_AC - (attack_Modifier + 1))));
+					minimum_Rolls_Needed_For_Hit[2] = Math.min(minimum_Roll_Needed_For_Critical, Math.max(2, (current_Target_AC - (attack_Modifier + 2))));
+					minimum_Rolls_Needed_For_Hit[3] = Math.min(minimum_Roll_Needed_For_Critical, Math.max(2, (current_Target_AC - (attack_Modifier + 3))));
+					minimum_Rolls_Needed_For_Hit[4] = Math.min(minimum_Roll_Needed_For_Critical, Math.max(2, (current_Target_AC - (attack_Modifier + 4))));
+					chance_To_Regular_Hit = ((probabilities_Array_Of_Roll_Or_Higher[minimum_Rolls_Needed_For_Hit[1]][probability_Type] + probabilities_Array_Of_Roll_Or_Higher[minimum_Rolls_Needed_For_Hit[2]][probability_Type] + probabilities_Array_Of_Roll_Or_Higher[minimum_Rolls_Needed_For_Hit[3]][probability_Type] + probabilities_Array_Of_Roll_Or_Higher[minimum_Rolls_Needed_For_Hit[4]][probability_Type]) / 4.0) - chance_To_Critical;
+				}
+
+				var missed_Attacks_Damage_Contribution = 0;
+				var regular_Hits_Damage_Contribution = 0;
+				var critical_Hits_Damage_Contribution = 0;
+
+				for(var i = 0; i <= number_Of_Attacks_In_Sequence; i++)	//Loops through and adds the probability * damage of each attack, including the first hit damage
+				{
+//					Binomial Probability of a hit: (N! / (i! * (N - i)!)) * c^i * ((1-c)^N-i)
+					missed_Attacks_Damage_Contribution = missed_Attacks_Damage_Contribution + ((factorials_Array[number_Of_Attacks_In_Sequence] / (factorials_Array[i] * factorials_Array[number_Of_Attacks_In_Sequence - i])) * Math.pow((chance_To_Regular_Hit + chance_To_Critical), i) * (Math.pow((1 - (chance_To_Regular_Hit + chance_To_Critical)), (number_Of_Attacks_In_Sequence - i))) * (average_Damage_Miss * (number_Of_Attacks_In_Sequence - i)));
+					regular_Hits_Damage_Contribution = regular_Hits_Damage_Contribution + ((factorials_Array[number_Of_Attacks_In_Sequence] / (factorials_Array[i] * factorials_Array[number_Of_Attacks_In_Sequence - i])) * Math.pow((chance_To_Regular_Hit + chance_To_Critical), i) * (Math.pow((1 - (chance_To_Regular_Hit + chance_To_Critical)), (number_Of_Attacks_In_Sequence - i))) * (average_Damage_Regular_Hit * (chance_To_Regular_Hit / (chance_To_Regular_Hit + chance_To_Critical)) * Math.max(0, i - 1) + (i >= 1 ? average_Damage_First_Hit_Regular * (chance_To_Regular_Hit / (chance_To_Regular_Hit + chance_To_Critical)) : 0)));
+					critical_Hits_Damage_Contribution = critical_Hits_Damage_Contribution + ((factorials_Array[number_Of_Attacks_In_Sequence] / (factorials_Array[i] * factorials_Array[number_Of_Attacks_In_Sequence - i])) * Math.pow((chance_To_Regular_Hit + chance_To_Critical), i) * (Math.pow((1 - (chance_To_Regular_Hit + chance_To_Critical)), (number_Of_Attacks_In_Sequence - i))) * (average_Damage_Critical_Hit * (chance_To_Critical / (chance_To_Regular_Hit + chance_To_Critical)) * Math.max(0, i - 1) + (i >= 1 ? average_Damage_First_Hit_Critical * (chance_To_Critical / (chance_To_Regular_Hit + chance_To_Critical)) : 0)));
+				}
+
+				return missed_Attacks_Damage_Contribution + regular_Hits_Damage_Contribution + critical_Hits_Damage_Contribution;
+			}
+
+			var table_Holder = document.getElementById("table_Holder");
+			var currently_Active_Tables = [];
+			var table_Strings_Array =	//Annoying HTML array for table elements, used in conjunction with descriptions and inputs to give appropriate IDs and values for new tables
+			[
+				'<span class = "full_Table"><span onchange = "populate_Table(',																//[] + Table number
+				')">',																														//[] + Description
+				'<input class = "save_Table_Button" type = "button" value = "Save Table" onclick = "save_Input_To_Local_Storage(',			//[] + Table number
+				')" id = "save_Table_Button_',																								//[] + Table Number
+				'"><br>',																													//[] + Description
+				'<input class = "input_Text_Box" type = "text" value = "',																	//[] + Input
+				'" id = "name_Input_Box_',																									//[] + Table number
+				'"><br>',																													//[] + Description
+				'<input class = "input_Checkbox" type = "checkbox" ',																		//[] + Input*
+				'onkeypress = "key_Pressed_On_Checkbox(event, this)" id = "use_Advanced_Options_Checkbox_',									//[] + Table Number*
+				'"><br>',																													//[] + Description*
+				'<input class = "input_Number_Box" type = "number" min = 0 max = 18 step = "1" value = ',									//[] + Input
+				' id = "number_Of_Attacks_In_Sequence_Input_',																				//[] + Table Number
+				'"><br>',																													//[] + Description
+				'<input class = "input_Number_Box" type = "number" step = "1" value = ',													//[] + Input
+				' id = "attack_Modifier_Input_',																							//[] + Table number
+				'"><br>',																													//[] + Description
+				'<input class = "input_Number_Box" type = "number" step = "any" value = ',													//[] + Input
+				' id = "average_Damage_Miss_Input_',																						//[] + Table number
+				'"><br>',																													//[] + Description
+				'<input class = "input_Number_Box" type = "number" step = "any" value = ',													//[] + Input
+				' id = "average_Damage_Regular_Hit_Input_',																					//[] + Table number
+				'"><br>',																													//[] + Description
+				'<input class = "input_Number_Box" type = "number" step = "any" value = ',													//[] + Input
+				' id = "average_Damage_First_Hit_Regular_Input_',																			//[] + Table Number
+				'"><br>',																													//[] + Description
+				'<input class = "input_Number_Box" type = "number" step = "any" value = ',													//[] + Input
+				' id = "average_Damage_Critical_Hit_Input_',																				//[] + Table number
+				'"><br>',																													//[] + Description
+				'<input class = "input_Number_Box" type = "number" step = "any" value = ',													//[] + Input
+				' id = "average_Damage_First_Hit_Critical_Input_',																			//[] + Table Number
+				'"><br>',																													//[] + Description
+				'<input class = "input_Number_Box" type = "number" min = 0 max = 20 step = "1" value = ',									//[] + Input
+				' id = "critical_Hit_Range_Input_',																							//[] + Table number
+				'"><br>',																													//[] + Description
+				'<input class = "input_Checkbox" type = "checkbox" ',																		//[] + Checkbox input
+				'onkeypress = "key_Pressed_On_Checkbox(event, this)" id = "blessed_Attack_Checkbox_',										//[] + Table number
+				'"><br>',																													//[] + Description
+				'<input class = "input_Checkbox" type = "checkbox" ',																		//[] + Checkbox input
+				'onkeypress = "key_Pressed_On_Checkbox(event, this)" id = "halfling_Lucky_Trait_Checkbox_',									//[] + Table number
+				'"><br>',																													//[] + Description
+				'<input class = "input_Checkbox" type = "checkbox" ',																		//[] + Checkbox input
+				'onkeypress = "key_Pressed_On_Checkbox(event, this)" id = "elven_Accuracy_Feat_Checkbox_',									//[] + Table number
+				'"><br>',																													//[] + Description
+				'<input class = "remove_Table_Button" type = "button" value = "Remove Table" onclick = "remove_Table(',						//[] + Table number
+				')" id = "remove_Table_Button_',																							//[] + Table Number
+				'"><br></span><table id = "display_Table_Element_',																			//[] + Table number
+				'"></table></span>'																											//[]
+			];
+			var first_Table_Descriptions_Array =	//Continued annoying HTML array for the element descriptions
+			[
+				'<span class = "input_Descriptor"></span>',
+				'<span class = "input_Descriptor">Name: </span>',
+				'<span class = "input_Descriptor">Use Advanced Options: </span>',
+				'<span class = "input_Descriptor">Number of Attacks: </span>',
+				'<span class = "input_Descriptor">Attack Modifier: </span>',
+				'<span class = "input_Descriptor">Average Damage - Miss: </span>',
+				'<span class = "input_Descriptor">Average Damage - Regular Hit: </span>',
+				'<span class = "input_Descriptor">First Hit Regular Damage: </span>',
+				'<span class = "input_Descriptor">Average Damage - Critical Hit: </span>',
+				'<span class = "input_Descriptor">First Hit Critical Damage: </span>',
+				'<span class = "input_Descriptor">Critical Hit Range: </span>',
+				'<span class = "input_Descriptor">Blessed Attack: </span>',
+				'<span class = "input_Descriptor">Halfling Lucky Trait: </span>',
+				'<span class = "input_Descriptor">Elven Accuracy Feat: </span>',
+				'<span class = "input_Descriptor"></span>'
+			];
+
+			function generate_New_Input(new_Table_Name, new_Use_Advanced_Options_Checked, new_Number_Of_Attacks_In_Sequence, new_Attack_Modifier, new_Average_Damage_Miss, new_Average_Damage_Regular_Hit, new_Average_Damage_First_Regular_Hit, new_Average_Damage_Critical_Hit, new_Average_Damage_First_Critical_Hit, new_Critical_Hit_Range, new_Blessed_Attack_Checked, new_Halfling_Lucky_Trait_Checked, new_Elven_Accuracy_Feat_Checked)
+			{
+				var inputs_Array = [];
+				var new_Table_Number = 1;
+				if(new_Attack_Modifier === undefined)	//Generate a new table copying values from the end table or base values if no other tables are present
+				{
+					if(currently_Active_Tables.length >= 1)
+					{
+						new_Table_Number = Number(currently_Active_Tables[currently_Active_Tables.length - 1] + 1);
+						var copied_Table_Number = (currently_Active_Tables[currently_Active_Tables.length - 1]);
+						inputs_Array.push(String(document.getElementById("name_Input_Box_" + copied_Table_Number).value));
+						inputs_Array.push((document.getElementById("use_Advanced_Options_Checkbox_" + copied_Table_Number).checked ? "checked " : ""));
+						inputs_Array.push(Number(document.getElementById("number_Of_Attacks_In_Sequence_Input_" + copied_Table_Number).value));
+						inputs_Array.push(Number(document.getElementById("attack_Modifier_Input_" + copied_Table_Number).value));
+						inputs_Array.push(Number(document.getElementById("average_Damage_Miss_Input_" + copied_Table_Number).value));
+						inputs_Array.push(Number(document.getElementById("average_Damage_Regular_Hit_Input_" + copied_Table_Number).value));
+						inputs_Array.push(Number(document.getElementById("average_Damage_First_Hit_Regular_Input_" + copied_Table_Number).value));
+						inputs_Array.push(Number(document.getElementById("average_Damage_Critical_Hit_Input_" + copied_Table_Number).value));
+						inputs_Array.push(Number(document.getElementById("average_Damage_First_Hit_Critical_Input_" + copied_Table_Number).value));
+						inputs_Array.push(Number(document.getElementById("critical_Hit_Range_Input_" + copied_Table_Number).value));
+						inputs_Array.push((document.getElementById("blessed_Attack_Checkbox_" + copied_Table_Number).checked ? "checked " : ""));
+						inputs_Array.push((document.getElementById("halfling_Lucky_Trait_Checkbox_" + copied_Table_Number).checked ? "checked " : ""));
+						inputs_Array.push((document.getElementById("elven_Accuracy_Feat_Checkbox_" + copied_Table_Number).checked ? "checked " : ""));
+					}
+					else	//Default Table Values
+					{
+						new_Table_Number = 1;
+						inputs_Array.push("");	//Name
+						inputs_Array.push("");	//Advanced Options Checkbox
+						inputs_Array.push(1);	//Number of Attacks
+						inputs_Array.push(0);	//Attack Modifier
+						inputs_Array.push(0);	//Miss Damage
+						inputs_Array.push(0);	//Regular Hit Damage
+						inputs_Array.push(0);	//First Regular Hit Damage
+						inputs_Array.push(0);	//Critical Hit Damage
+						inputs_Array.push(0);	//First Critical Hit Damage
+						inputs_Array.push(1);	//Critical Hit Range
+						inputs_Array.push("");	//Blessed Attack Checkbox
+						inputs_Array.push("");	//Halfling Lucky Trait Checkbox
+						inputs_Array.push("");	//Elven Accuracy Feat Checkbox
+					}
+				}
+				else	//Generate a new table using the values passed into the function
+				{
+					inputs_Array.push(new_Table_Name);
+					inputs_Array.push(new_Use_Advanced_Options_Checked);
+					inputs_Array.push(new_Number_Of_Attacks_In_Sequence);
+					inputs_Array.push(new_Attack_Modifier);
+					inputs_Array.push(new_Average_Damage_Miss);
+					inputs_Array.push(new_Average_Damage_Regular_Hit);
+					inputs_Array.push(new_Average_Damage_First_Regular_Hit);
+					inputs_Array.push(new_Average_Damage_Critical_Hit);
+					inputs_Array.push(new_Average_Damage_First_Critical_Hit);
+					inputs_Array.push(new_Critical_Hit_Range);
+					inputs_Array.push(new_Blessed_Attack_Checked);
+					inputs_Array.push(new_Halfling_Lucky_Trait_Checked);
+					inputs_Array.push(new_Elven_Accuracy_Feat_Checked);
+					if(currently_Active_Tables.length >= 1)
+					{
+						new_Table_Number = currently_Active_Tables[currently_Active_Tables.length - 1] + 1;
+					}
+					else
+					{
+						new_Table_Number = 1;
+					}
+				}
+				table_Holder.insertAdjacentHTML(
+					"beforeend",
+					table_Strings_Array[0] + new_Table_Number +
+					table_Strings_Array[1] + (rebuild_First_Table_Descriptions ? first_Table_Descriptions_Array[0] : "") +
+					table_Strings_Array[2] + new_Table_Number +
+					table_Strings_Array[3] + new_Table_Number +
+					table_Strings_Array[4] + (rebuild_First_Table_Descriptions ? first_Table_Descriptions_Array[1] : "") +
+					table_Strings_Array[5] + inputs_Array[0] +
+					table_Strings_Array[6] + new_Table_Number +
+					table_Strings_Array[7] + (rebuild_First_Table_Descriptions ? first_Table_Descriptions_Array[2] : "") +
+					table_Strings_Array[8] + inputs_Array[1] +
+					table_Strings_Array[9] + new_Table_Number +
+					table_Strings_Array[10] + (rebuild_First_Table_Descriptions ? first_Table_Descriptions_Array[3] : "") +
+					table_Strings_Array[11] + inputs_Array[2] +
+					table_Strings_Array[12] + new_Table_Number +
+					table_Strings_Array[13] + (rebuild_First_Table_Descriptions ? first_Table_Descriptions_Array[4] : "") +
+					table_Strings_Array[14] + inputs_Array[3] +
+					table_Strings_Array[15] + new_Table_Number +
+					table_Strings_Array[16] + (rebuild_First_Table_Descriptions ? first_Table_Descriptions_Array[5] : "") +
+					table_Strings_Array[17] + inputs_Array[4] +
+					table_Strings_Array[18] + new_Table_Number +
+					table_Strings_Array[19] + (rebuild_First_Table_Descriptions ? first_Table_Descriptions_Array[6] : "") +
+					table_Strings_Array[20] + inputs_Array[5] +
+					table_Strings_Array[21] + new_Table_Number +
+					table_Strings_Array[22] + (rebuild_First_Table_Descriptions ? first_Table_Descriptions_Array[7] : "") +
+					table_Strings_Array[23] + inputs_Array[6] +
+					table_Strings_Array[24] + new_Table_Number +
+					table_Strings_Array[25] + (rebuild_First_Table_Descriptions ? first_Table_Descriptions_Array[8] : "") +
+					table_Strings_Array[26] + inputs_Array[7] +
+					table_Strings_Array[27] + new_Table_Number +
+					table_Strings_Array[28] + (rebuild_First_Table_Descriptions ? first_Table_Descriptions_Array[9] : "") +
+					table_Strings_Array[29] + inputs_Array[8] +
+					table_Strings_Array[30] + new_Table_Number +
+					table_Strings_Array[31] + (rebuild_First_Table_Descriptions ? first_Table_Descriptions_Array[10] : "") +
+					table_Strings_Array[32] + inputs_Array[9] +
+					table_Strings_Array[33] + new_Table_Number +
+					table_Strings_Array[34] + (rebuild_First_Table_Descriptions ? first_Table_Descriptions_Array[11] : "") +
+					table_Strings_Array[35] + inputs_Array[10] +
+					table_Strings_Array[36] + new_Table_Number +
+					table_Strings_Array[37] + (rebuild_First_Table_Descriptions ? first_Table_Descriptions_Array[12] : "") +
+					table_Strings_Array[38] + inputs_Array[11] +
+					table_Strings_Array[39] + new_Table_Number +
+					table_Strings_Array[40] + (rebuild_First_Table_Descriptions ? first_Table_Descriptions_Array[13] : "") +
+					table_Strings_Array[41] + inputs_Array[12] +
+					table_Strings_Array[42] + new_Table_Number +
+					table_Strings_Array[43] + (rebuild_First_Table_Descriptions ? first_Table_Descriptions_Array[14] : "") +
+					table_Strings_Array[44] + new_Table_Number +
+					table_Strings_Array[45] + new_Table_Number +
+					table_Strings_Array[46] + new_Table_Number +
+					table_Strings_Array[47]
+				);
+				currently_Active_Tables.push(new_Table_Number);
+				rebuild_First_Table_Descriptions = false;	//Descriptions have either been added or weren't needed
+				update_Table_Holder_Width();				//Makes room for the new table
+				populate_Table(new_Table_Number);
+			}
+
+			function update_Table_Holder_Width()			//Be sure to update this function if table widths are modified
+			{
+				var new_Table_Holder_Width = 1.01667;
+				if(display_Disadvantage === true || display_Regular === true || display_Advantage === true)
+				{
+					if(display_Disadvantage === true)
+					{
+						new_Table_Holder_Width = new_Table_Holder_Width + 103;
+					}
+					if(display_Regular === true)
+					{
+						new_Table_Holder_Width = new_Table_Holder_Width + 103;
+					}
+					if(display_Advantage === true)
+					{
+						new_Table_Holder_Width = new_Table_Holder_Width + 103;
+					}
+				}
+				else
+				{
+					new_Table_Holder_Width = 104.01667;
+				}
+				//Zooming out in Firefox and Chrome produces inconsistent table widths, causing tables to wrap to the next line
+				//Table widths at minimum zoom in each browser:
+				//Chrome: 3- 316;	Firefox: 3- 319.333;	Internet Explorer: 310
+				//Chrome: 2- 212;	Firefox: 2- 214;		Internet Explorer: 207
+				//Chrome: 1- 110;	Firefox: 1- 108.6833;	Internet Explorer: 104
+				//Chrome + 6/5/6;	Firefox + 9.333/7/4.6833;
+				new_Table_Holder_Width = ((new_Table_Holder_Width + 9.333) * (currently_Active_Tables.length - 1)) + 413;	//Remove +9.333 if zooming out issue is resolved; currently allows user to continue scrolling past last table in standard zooms
+				table_Holder.style.width = String(new_Table_Holder_Width) + "px";
+			}
+
+			function populate_All_Tables()
+			{
+				target_AC_Minimum = Math.ceil(Number(target_AC_Minimum_Element.value));	//Universal table display options
+				target_AC_Maximum = Math.floor(Number(target_AC_Maximum_Element.value));
+				display_Disadvantage = display_Disadvantage_Element.checked;
+				display_Regular = display_Regular_Element.checked;
+				display_Advantage = display_Advantage_Element.checked;
+				if(check_Local_Storage_Availability() === true)
+				{
+					window.localStorage.setItem("target_AC_Minimum", target_AC_Minimum);
+					window.localStorage.setItem("target_AC_Maximum", target_AC_Maximum);
+					window.localStorage.setItem("display_Disadvantage", display_Disadvantage);
+					window.localStorage.setItem("display_Regular", display_Regular);
+					window.localStorage.setItem("display_Advantage", display_Advantage);
+				}
+				update_Table_Holder_Width();	//Update width in case of change in items displayed
+				for(i = 0; i < currently_Active_Tables.length; i++)
+				{
+					populate_Table(currently_Active_Tables[i]);
+				}
+			}
+
+			function key_Pressed_On_Checkbox(keypress_Event, element_Selected)
+			{
+				if(keypress_Event.key === "Enter")
+				{
+					element_Selected.click();
+				}
+			}
+
+			var rebuild_First_Table_Descriptions = true;	//Used to tell if the first table has been removed and needs display information added
+
+			function remove_Table(table_To_Remove)
+			{
+				if(currently_Active_Tables.length >= 1)
+				{
+					if(currently_Active_Tables.length === 1 || table_To_Remove === currently_Active_Tables[0])
+					{
+						rebuild_First_Table_Descriptions = true;
+					}
+				}
+				if(table_To_Remove === "Last")
+				{
+					if(currently_Active_Tables.length >= 1)
+					{
+						document.getElementById("display_Table_Element_" + currently_Active_Tables[currently_Active_Tables.length - 1]).parentElement.parentElement.removeChild(document.getElementById("display_Table_Element_" + currently_Active_Tables[currently_Active_Tables.length - 1]).parentElement);	//Ugly parent traversal to remove one's self for more browser support
+						currently_Active_Tables.splice(currently_Active_Tables.length - 1, 1);
+					}
+				}
+				else
+				{
+					document.getElementById("display_Table_Element_" + table_To_Remove).parentElement.parentElement.removeChild(document.getElementById("display_Table_Element_" + table_To_Remove).parentElement);
+					currently_Active_Tables.splice(currently_Active_Tables.indexOf(table_To_Remove), 1);
+				}
+
+				if(rebuild_First_Table_Descriptions === true && currently_Active_Tables.length >= 1)
+				{
+					document.getElementById("save_Table_Button_" + currently_Active_Tables[0]).insertAdjacentHTML("beforebegin", first_Table_Descriptions_Array[0]);
+					document.getElementById("name_Input_Box_" + currently_Active_Tables[0]).insertAdjacentHTML("beforebegin", first_Table_Descriptions_Array[1]);
+					document.getElementById("use_Advanced_Options_Checkbox_" + currently_Active_Tables[0]).insertAdjacentHTML("beforebegin", first_Table_Descriptions_Array[2]);
+					document.getElementById("number_Of_Attacks_In_Sequence_Input_" + currently_Active_Tables[0]).insertAdjacentHTML("beforebegin", first_Table_Descriptions_Array[3]);
+					document.getElementById("attack_Modifier_Input_" + currently_Active_Tables[0]).insertAdjacentHTML("beforebegin", first_Table_Descriptions_Array[4]);
+					document.getElementById("average_Damage_Miss_Input_" + currently_Active_Tables[0]).insertAdjacentHTML("beforebegin", first_Table_Descriptions_Array[5]);
+					document.getElementById("average_Damage_Regular_Hit_Input_" + currently_Active_Tables[0]).insertAdjacentHTML("beforebegin", first_Table_Descriptions_Array[6]);
+					document.getElementById("average_Damage_First_Hit_Regular_Input_" + currently_Active_Tables[0]).insertAdjacentHTML("beforebegin", first_Table_Descriptions_Array[7]);
+					document.getElementById("average_Damage_Critical_Hit_Input_" + currently_Active_Tables[0]).insertAdjacentHTML("beforebegin", first_Table_Descriptions_Array[8]);
+					document.getElementById("average_Damage_First_Hit_Critical_Input_" + currently_Active_Tables[0]).insertAdjacentHTML("beforebegin", first_Table_Descriptions_Array[9]);
+					document.getElementById("critical_Hit_Range_Input_" + currently_Active_Tables[0]).insertAdjacentHTML("beforebegin", first_Table_Descriptions_Array[10]);
+					document.getElementById("blessed_Attack_Checkbox_" + currently_Active_Tables[0]).insertAdjacentHTML("beforebegin", first_Table_Descriptions_Array[11]);
+					document.getElementById("halfling_Lucky_Trait_Checkbox_" + currently_Active_Tables[0]).insertAdjacentHTML("beforebegin", first_Table_Descriptions_Array[12]);
+					document.getElementById("elven_Accuracy_Feat_Checkbox_" + currently_Active_Tables[0]).insertAdjacentHTML("beforebegin", first_Table_Descriptions_Array[13]);
+					document.getElementById("remove_Table_Button_" + currently_Active_Tables[0]).insertAdjacentHTML("beforebegin", first_Table_Descriptions_Array[14]);
+					populate_Table(currently_Active_Tables[0]);
+					rebuild_First_Table_Descriptions = false;
+				}
+				//else if(rebuild_First_Table_Descriptions === true)
+				//{
+					//Builds on next table added and sets boolean to false afterwards
+				//}
+				update_Table_Holder_Width();	//Shortens the table due to removal
+			}
+
+			var example_Tables_Element = document.getElementById("example_Tables_Drop_Down_List");
+
+			function generate_Example_Table()
+			{
+				if(example_Tables_Element.value !== "")
+				{
+					var new_Input_Array = JSON.parse(example_Tables_Element.value);
+					generate_New_Input(new_Input_Array[0], new_Input_Array[1], new_Input_Array[2], new_Input_Array[3], new_Input_Array[4], new_Input_Array[5], new_Input_Array[6], new_Input_Array[7], new_Input_Array[8], new_Input_Array[9]);
+				}
+			}
+
+			function check_Local_Storage_Availability()
+			{
+				try
+				{
+					window.localStorage.setItem("local_Storage_Availability_Test", "true");
+					window.localStorage.removeItem("local_Storage_Availability_Test");
+					return true;
+				}
+				catch(exception)
+				{
+					return false;
+				}
+			}
+
+			var saved_Entries_Element = document.getElementById("saved_Entries_Drop_Down_List");
+
+			function save_Input_To_Local_Storage(table_Number)
+			{
+				if(check_Local_Storage_Availability() === true)
+				{
+					var new_Saved_Entry = [];
+					new_Saved_Entry.push(String(document.getElementById("name_Input_Box_" + table_Number).value));
+					new_Saved_Entry.push(document.getElementById("use_Advanced_Options_Checkbox_" + table_Number).checked ? "checked " : "");
+					new_Saved_Entry.push(Math.floor(Number(document.getElementById("number_Of_Attacks_In_Sequence_Input_" + table_Number).value)));
+					new_Saved_Entry.push(Math.floor(Number(document.getElementById("attack_Modifier_Input_" + table_Number).value)));
+					new_Saved_Entry.push(Number(document.getElementById("average_Damage_Miss_Input_" + table_Number).value));
+					new_Saved_Entry.push(Number(document.getElementById("average_Damage_Regular_Hit_Input_" + table_Number).value));
+					new_Saved_Entry.push(Number(document.getElementById("average_Damage_First_Hit_Regular_Input_" + table_Number).value));
+					new_Saved_Entry.push(Number(document.getElementById("average_Damage_Critical_Hit_Input_" + table_Number).value));
+					new_Saved_Entry.push(Number(document.getElementById("average_Damage_First_Hit_Critical_Input_" + table_Number).value));
+					new_Saved_Entry.push(Math.floor(Number(document.getElementById("critical_Hit_Range_Input_" + table_Number).value)));
+					new_Saved_Entry.push(document.getElementById("blessed_Attack_Checkbox_" + table_Number).checked ? "checked " : "");
+					new_Saved_Entry.push(document.getElementById("halfling_Lucky_Trait_Checkbox_" + table_Number).checked ? "checked " : "");
+					new_Saved_Entry.push(document.getElementById("elven_Accuracy_Feat_Checkbox_" + table_Number).checked ? "checked " : "");
+					if(window.localStorage.getItem("saved_Entries") === null)
+					{
+						var initial_Saved_Entry = [new_Saved_Entry];
+						window.localStorage.setItem("saved_Entries", JSON.stringify(initial_Saved_Entry));
+					}
+					else
+					{
+						var current_Saved_Entries = JSON.parse(window.localStorage.getItem("saved_Entries"));
+						var run_Duplicate_Test = true;
+						var duplicates_Encountered = 0;
+						while(run_Duplicate_Test === true)
+						{
+							run_Duplicate_Test = false;
+							for(i = 0; i < current_Saved_Entries.length; i++)
+							{
+								if(current_Saved_Entries[i][0] === new_Saved_Entry[0])
+								{
+									run_Duplicate_Test = true;
+									if(duplicates_Encountered > 0)
+									{
+										new_Saved_Entry[0] = new_Saved_Entry[0].substring(0, new_Saved_Entry[0].length - String(duplicates_Encountered).length - 1) + String(duplicates_Encountered + 1) + ")";
+									}
+									else
+									{
+										new_Saved_Entry[0] = new_Saved_Entry[0] + "(" + String(duplicates_Encountered + 1) + ")";
+									}
+									duplicates_Encountered = duplicates_Encountered + 1;
+									break;
+								}
+							}
+						}
+						current_Saved_Entries.push(new_Saved_Entry);
+						window.localStorage.setItem("saved_Entries", JSON.stringify(current_Saved_Entries));
+					}
+
+					var new_Option = document.createElement("OPTION");
+					new_Option.value = String(saved_Entries_Element.childNodes.length);
+					new_Option.innerHTML = new_Saved_Entry[0];
+					saved_Entries_Element.appendChild(new_Option);
+				}
+			}
+
+			function load_From_Local_Storage()
+			{
+				var item_Number_In_Local_Storage = saved_Entries_Element.value;
+				if(check_Local_Storage_Availability() === true && item_Number_In_Local_Storage !== "")
+				{
+					var item_To_Load = JSON.parse(window.localStorage.getItem("saved_Entries"))[item_Number_In_Local_Storage];
+					generate_New_Input(item_To_Load[0], item_To_Load[1], item_To_Load[2], item_To_Load[3], item_To_Load[4], item_To_Load[5], item_To_Load[6], item_To_Load[7], item_To_Load[8], item_To_Load[9], item_To_Load[10], item_To_Load[11], item_To_Load[12]);
+				}
+			}
+
+			function delete_From_Local_Storage()
+			{
+				var item_Number_In_Local_Storage = saved_Entries_Element.value;
+				if(check_Local_Storage_Availability() === true && item_Number_In_Local_Storage !== "")
+				{
+					if(window.confirm("Click 'OK' to delete item " + saved_Entries_Element.childNodes[item_Number_In_Local_Storage].innerHTML + " from the saved entries.") === true)	//Maybe to do: use something other than the confirmation box
+					{
+						var new_Saved_Entries_Array = JSON.parse(window.localStorage.getItem("saved_Entries"));
+						new_Saved_Entries_Array.splice(item_Number_In_Local_Storage, 1);
+						window.localStorage.setItem("saved_Entries", JSON.stringify(new_Saved_Entries_Array));
+						while(saved_Entries_Element.children[item_Number_In_Local_Storage])
+						{
+							saved_Entries_Element.removeChild(saved_Entries_Element.lastChild);
+						}
+						for(i = item_Number_In_Local_Storage; i < new_Saved_Entries_Array.length; i++)
+						{
+							var current_Option = document.createElement("OPTION");
+							current_Option.value = String(i);
+							current_Option.innerHTML = new_Saved_Entries_Array[i][0];
+							saved_Entries_Element.appendChild(current_Option);
+						}
+					}
+				}
+			}
+
+			function initialize_Page()	//Page load set up, grabs last ran table options and puts saved entries into the list, along with ensuring table display options are set due to some browsers setting values at different times; also generates a table to start off with
+			{
+				if(check_Local_Storage_Availability() === true)
+				{
+					if(window.localStorage.getItem("target_AC_Minimum") !== null)
+					{
+						target_AC_Minimum_Element.value = Number(window.localStorage.getItem("target_AC_Minimum"));
+						target_AC_Maximum_Element.value = Number(window.localStorage.getItem("target_AC_Maximum"));
+						if(window.localStorage.getItem("display_Disadvantage") === "false")
+						{
+							display_Disadvantage_Element.checked = false;
+						}
+						if(window.localStorage.getItem("display_Regular") === "false")
+						{
+							display_Regular_Element.checked = false;
+						}
+						if(window.localStorage.getItem("display_Advantage") === "false")
+						{
+							display_Advantage_Element.checked = false;
+						}
+					}
+					if(window.localStorage.getItem("saved_Entries") !== null)
+					{
+						saved_Entries_Array = JSON.parse(window.localStorage.getItem("saved_Entries"));
+						for(i = 0; i < saved_Entries_Array.length; i++)
+						{
+							var current_Option = document.createElement("OPTION");
+							current_Option.value = String(i);
+							current_Option.innerHTML = saved_Entries_Array[i][0];
+							saved_Entries_Element.appendChild(current_Option);
+						}
+					}
+				}
+				else
+				{
+					var no_Local_Storage_Available_Option = document.createElement("OPTION");
+					no_Local_Storage_Available_Option.value = "";
+					no_Local_Storage_Available_Option.innerHTML = "Local Storage is Unavailable";
+					saved_Entries_Element.appendChild(no_Local_Storage_Available_Option);
+				}
+				target_AC_Minimum = Math.ceil(Number(target_AC_Minimum_Element.value));
+				target_AC_Maximum = Math.floor(Number(target_AC_Maximum_Element.value));
+				display_Disadvantage = display_Disadvantage_Checkbox.checked;
+				display_Regular = display_Regular_Checkbox.checked;
+				display_Advantage = display_Advantage_Checkbox.checked;
+				generate_New_Input("Rogue Fighter", "checked ", 2, 8, 0, 7.5, 11, 12, 19, 2, "", "", "");
+				document.documentElement.style.backgroundImage = 'linear-gradient(90deg, rgba(0,0,0,1), rgba(0,0,0,.5)),  url("Tyranny_Of_Dragons.jpg")';
+			}
+
+			function update_Damage_Table()
+			{
+				if(damage_Table_Great_Weapon_Master_Radio_Button_Element.checked == true)
+				{
+					damage_Table_D4_Average_Damage_Contribution_Element.innerHTML = Math.round((Number(damage_Table_D4_Input_Box_Element.value) * 3.0) * 10000) / 10000;
+					damage_Table_D6_Average_Damage_Contribution_Element.innerHTML = Math.round((Number(damage_Table_D6_Input_Box_Element.value) * 4.1666666667) * 10000) / 10000;
+					damage_Table_D8_Average_Damage_Contribution_Element.innerHTML = Math.round((Number(damage_Table_D8_Input_Box_Element.value) * 5.25) * 10000) / 10000;
+					damage_Table_D10_Average_Damage_Contribution_Element.innerHTML = Math.round((Number(damage_Table_D10_Input_Box_Element.value) * 6.3) * 10000) / 10000;
+					damage_Table_D12_Average_Damage_Contribution_Element.innerHTML = Math.round((Number(damage_Table_D12_Input_Box_Element.value) * 7.3333333333) * 10000) / 10000;
+					damage_Table_Damage_Modifier_Contribution_Element.innerHTML = Math.round((Number(damage_Table_Damage_Modifer_Input_Box_Element.value)) * 10000) / 10000;
+					damage_Table_Extra_Critical_Damage_Contribution_Element.innerHTML = Math.round((Number(damage_Table_Extra_Critical_Damage_Input_Box_Element.value)) * 10000) / 10000;
+					damage_Table_Total_Average_Damage_Regular_Hit_Element.innerHTML = Math.round(((Number(damage_Table_D4_Input_Box_Element.value) * 3.0 + Number(damage_Table_D6_Input_Box_Element.value) * 4.1666666667 + Number(damage_Table_D8_Input_Box_Element.value) * 5.25 + Number(damage_Table_D10_Input_Box_Element.value) * 6.3 + Number(damage_Table_D12_Input_Box_Element.value) * 7.3333333333) + Number(damage_Table_Damage_Modifer_Input_Box_Element.value)) * 10000) / 10000;
+					damage_Table_Total_Average_Damage_Critical_Hit_Element.innerHTML = Math.round((((Number(damage_Table_D4_Input_Box_Element.value) * 3.0 + Number(damage_Table_D6_Input_Box_Element.value) * 4.1666666667 + Number(damage_Table_D8_Input_Box_Element.value) * 5.25 + Number(damage_Table_D10_Input_Box_Element.value) * 6.3 + Number(damage_Table_D12_Input_Box_Element.value) * 7.3333333333)) * 2.0 + Number(damage_Table_Damage_Modifer_Input_Box_Element.value) + Number(damage_Table_Extra_Critical_Damage_Input_Box_Element.value)) * 10000) / 10000;
+				}
+				else if(damage_Table_Elemental_Adept_Radio_Button_Element.checked == true)
+				{
+					damage_Table_D4_Average_Damage_Contribution_Element.innerHTML = Math.round((Number(damage_Table_D4_Input_Box_Element.value) * 2.75) * 10000) / 10000;
+					damage_Table_D6_Average_Damage_Contribution_Element.innerHTML = Math.round((Number(damage_Table_D6_Input_Box_Element.value) * 3.6666666667) * 10000) / 10000;
+					damage_Table_D8_Average_Damage_Contribution_Element.innerHTML = Math.round((Number(damage_Table_D8_Input_Box_Element.value) * 4.625) * 10000) / 10000;
+					damage_Table_D10_Average_Damage_Contribution_Element.innerHTML = Math.round((Number(damage_Table_D10_Input_Box_Element.value) * 5.6) * 10000) / 10000;
+					damage_Table_D12_Average_Damage_Contribution_Element.innerHTML = Math.round((Number(damage_Table_D12_Input_Box_Element.value) * 6.5833333333) * 10000) / 10000;
+					damage_Table_Damage_Modifier_Contribution_Element.innerHTML = Math.round((Number(damage_Table_Damage_Modifer_Input_Box_Element.value)) * 10000) / 10000;
+					damage_Table_Extra_Critical_Damage_Contribution_Element.innerHTML = Math.round((Number(damage_Table_Extra_Critical_Damage_Input_Box_Element.value)) * 10000) / 10000;
+					damage_Table_Total_Average_Damage_Regular_Hit_Element.innerHTML = Math.round(((Number(damage_Table_D4_Input_Box_Element.value) * 2.75 + Number(damage_Table_D6_Input_Box_Element.value) * 3.6666666667 + Number(damage_Table_D8_Input_Box_Element.value) * 4.625 + Number(damage_Table_D10_Input_Box_Element.value) * 5.6 + Number(damage_Table_D12_Input_Box_Element.value) * 6.5833333333) + Number(damage_Table_Damage_Modifer_Input_Box_Element.value)) * 10000) / 10000;
+					damage_Table_Total_Average_Damage_Critical_Hit_Element.innerHTML = Math.round((((Number(damage_Table_D4_Input_Box_Element.value) * 2.75 + Number(damage_Table_D6_Input_Box_Element.value) * 3.6666666667 + Number(damage_Table_D8_Input_Box_Element.value) * 4.625 + Number(damage_Table_D10_Input_Box_Element.value) * 5.6 + Number(damage_Table_D12_Input_Box_Element.value) * 6.5833333333)) * 2.0 + Number(damage_Table_Damage_Modifer_Input_Box_Element.value) + Number(damage_Table_Extra_Critical_Damage_Input_Box_Element.value)) * 10000) / 10000;
+				}
+				else
+				{
+					damage_Table_D4_Average_Damage_Contribution_Element.innerHTML = Math.round((Number(damage_Table_D4_Input_Box_Element.value) * 2.5) * 10000) / 10000;
+					damage_Table_D6_Average_Damage_Contribution_Element.innerHTML = Math.round((Number(damage_Table_D6_Input_Box_Element.value) * 3.5) * 10000) / 10000;
+					damage_Table_D8_Average_Damage_Contribution_Element.innerHTML = Math.round((Number(damage_Table_D8_Input_Box_Element.value) * 4.5) * 10000) / 10000;
+					damage_Table_D10_Average_Damage_Contribution_Element.innerHTML = Math.round((Number(damage_Table_D10_Input_Box_Element.value) * 5.5) * 10000) / 10000;
+					damage_Table_D12_Average_Damage_Contribution_Element.innerHTML = Math.round((Number(damage_Table_D12_Input_Box_Element.value) * 6.5) * 10000) / 10000;
+					damage_Table_Damage_Modifier_Contribution_Element.innerHTML = Math.round((Number(damage_Table_Damage_Modifer_Input_Box_Element.value)) * 10000) / 10000;
+					damage_Table_Extra_Critical_Damage_Contribution_Element.innerHTML = Math.round((Number(damage_Table_Extra_Critical_Damage_Input_Box_Element.value)) * 10000) / 10000;
+					damage_Table_Total_Average_Damage_Regular_Hit_Element.innerHTML = Math.round(((Number(damage_Table_D4_Input_Box_Element.value) * 2.5 + Number(damage_Table_D6_Input_Box_Element.value) * 3.5 + Number(damage_Table_D8_Input_Box_Element.value) * 4.5 + Number(damage_Table_D10_Input_Box_Element.value) * 5.5 + Number(damage_Table_D12_Input_Box_Element.value) * 6.5) + Number(damage_Table_Damage_Modifer_Input_Box_Element.value)) * 10000) / 10000;
+					damage_Table_Total_Average_Damage_Critical_Hit_Element.innerHTML = Math.round((((Number(damage_Table_D4_Input_Box_Element.value) * 2.5 + Number(damage_Table_D6_Input_Box_Element.value) * 3.5 + Number(damage_Table_D8_Input_Box_Element.value) * 4.5 + Number(damage_Table_D10_Input_Box_Element.value) * 5.5 + Number(damage_Table_D12_Input_Box_Element.value) * 6.5)) * 2.0 + Number(damage_Table_Damage_Modifer_Input_Box_Element.value) + Number(damage_Table_Extra_Critical_Damage_Input_Box_Element.value)) * 10000) / 10000;
+				}
+			}
+		</script>
+	</body>
+</html>
