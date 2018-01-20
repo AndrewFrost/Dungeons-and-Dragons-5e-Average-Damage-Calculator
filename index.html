@@ -319,10 +319,10 @@
 							<option value = '["Greataxe","",1,5,0,9.5,9.5,16,16,1,"","",""]'>Greataxe, 16 Strength 2 Proficiency</option>
 							<option value = '["Greatsword GWF","",1,5,0,11.3333,11.3333,19.6667,19.6667,1,"","",""]'>Greatsword, 16 Strength 2 Proficiency - Great Weapon Fighting</option>
 							<option value = '["Greataxe GWF","",1,5,0,10.3333,10.3333,17.6666,17.6666,1,"","",""]'>Greataxe, 16 Strength 2 Proficiency - Great Weapon Fighting</option>
-							<option value = '["Halforc +3 Greataxe","",4,14,0,14.5,14.5,27.5,27.5,3,"","",""]'>+3 Greataxe Champion 20 Halforc, 20 Strength 6 Proficiency</option>
-							<option value = '["Halforc +3 Greataxe GWF","",4,14,0,15.3333,15.3333,30,30,3,"","",""]'>+3 Greataxe Champion 20 Halforc, 20 Strength 6 Proficiency - Great Weapon Fighting</option>
-							<option value = '["Halforc +3 Greatsword","",4,14,0,15,15,25.5,25.5,3,"","",""]'>+3 Greatsword Champion 20 Halforc, 20 Strength 6 Proficiency</option>
-							<option value = '["Halforc +3 Greatsword GWF","",4,14,0,16.3333,16.3333,28.8333,28.8333,3,"","",""]'>+3 Greatsword Champion 20 Halforc, 20 Strength 6 Proficiency - Great Weapon Fighting</option>
+							<option value = '["Halforc +3 Greataxe","Checked ",4,14,0,14.5,14.5,27.5,27.5,3,"","",""]'>+3 Greataxe Champion 20 Halforc, 20 Strength 6 Proficiency</option>
+							<option value = '["Halforc +3 Greataxe GWF","Checked ",4,14,0,15.3333,15.3333,30,30,3,"","",""]'>+3 Greataxe Champion 20 Halforc, 20 Strength 6 Proficiency - Great Weapon Fighting</option>
+							<option value = '["Halforc +3 Greatsword","Checked ",4,14,0,15,15,25.5,25.5,3,"","",""]'>+3 Greatsword Champion 20 Halforc, 20 Strength 6 Proficiency</option>
+							<option value = '["Halforc +3 Greatsword GWF","Checked ",4,14,0,16.3333,16.3333,28.8333,28.8333,3,"","",""]'>+3 Greatsword Champion 20 Halforc, 20 Strength 6 Proficiency - Great Weapon Fighting</option>
 						</select>
 					</div>
 					<div>
@@ -339,7 +339,7 @@
 		</div>
 		<div>
 			<br>
-			<table id = "damage_Table">
+			<table id = "damage_Table" onchange = "update_Damage_Table()">
 				<caption class = "table_Title_Container">
 					<span class = "table_Title">
 						Weapon Damage Table
@@ -347,44 +347,44 @@
 				</caption>
 				<tr>
 					<th  style = "text-align: right" >
-						Great Weapon Master: <input style = "float: right"  type = "radio" name = "damage_Table_Damage_Selection_Radio_Button_Group" onkeypress = "key_Pressed_On_Checkbox(event, this)" onchange = "update_Damage_Table()" id = "damage_Table_Great_Weapon_Master_Radio_Button">
+						Great Weapon Fighting: <input style = "float: right"  type = "radio" name = "damage_Table_Damage_Selection_Radio_Button_Group" onkeypress = "key_Pressed_On_Checkbox(event, this)" id = "damage_Table_Great_Weapon_Master_Radio_Button">
 						<br>
-						Elemental Adept: <input style = "float: right" type = "radio" name = "damage_Table_Damage_Selection_Radio_Button_Group" onkeypress = "key_Pressed_On_Checkbox(event, this)" onchange = "update_Damage_Table()" id = "damage_Table_Elemental_Adept_Radio_Button">
+						Elemental Adept: <input style = "float: right" type = "radio" name = "damage_Table_Damage_Selection_Radio_Button_Group" onkeypress = "key_Pressed_On_Checkbox(event, this)" id = "damage_Table_Elemental_Adept_Radio_Button">
 						<br>
-						None: <input style = "float: right"  type = "radio" name = "damage_Table_Damage_Selection_Radio_Button_Group" onkeypress = "key_Pressed_On_Checkbox(event, this)" onchange = "update_Damage_Table()" checked>
+						None: <input style = "float: right"  type = "radio" name = "damage_Table_Damage_Selection_Radio_Button_Group" onkeypress = "key_Pressed_On_Checkbox(event, this)" checked>
 					</th>
 					<th>
-						<input class = "input_Number_Box" type = "number" step = "1" value = 0 onchange = "update_Damage_Table()" id = "damage_Table_D4_Input_Box">
+						<input class = "input_Number_Box" type = "number" step = "1" value = 0 id = "damage_Table_D4_Input_Box">
 						<br>
 						D4
 					</th>
 					<th>
-						<input class = "input_Number_Box" type = "number" step = "1" value = 0 onchange = "update_Damage_Table()" id = "damage_Table_D6_Input_Box">
+						<input class = "input_Number_Box" type = "number" step = "1" value = 0 id = "damage_Table_D6_Input_Box">
 						<br>
 						D6
 					</th>
 					<th>
-						<input class = "input_Number_Box" type = "number" step = "1" value = 0 onchange = "update_Damage_Table()" id = "damage_Table_D8_Input_Box">
+						<input class = "input_Number_Box" type = "number" step = "1" value = 0 id = "damage_Table_D8_Input_Box">
 						<br>
 						D8
 					</th>
 					<th>
-						<input class = "input_Number_Box" type = "number" step = "1" value = 0 onchange = "update_Damage_Table()" id = "damage_Table_D10_Input_Box">
+						<input class = "input_Number_Box" type = "number" step = "1" value = 0 id = "damage_Table_D10_Input_Box">
 						<br>
 						D10
 					</th>
 					<th>
-						<input class = "input_Number_Box" type = "number" step = "1" value = 0 onchange = "update_Damage_Table()" id = "damage_Table_D12_Input_Box">
+						<input class = "input_Number_Box" type = "number" step = "1" value = 0 id = "damage_Table_D12_Input_Box">
 						<br>
 						D12
 					</th>
 					<th>
-						<input class = "input_Number_Box" type = "number" step = "1" value = 0 onchange = "update_Damage_Table()" id = "damage_Table_Damage_Modifier_Input_Box">
+						<input class = "input_Number_Box" type = "number" step = "1" value = 0 id = "damage_Table_Damage_Modifier_Input_Box">
 						<br>
 						+ Modifier
 					</th>
 					<th>
-						<input class = "input_Number_Box" type = "number" step = "any" value = 0 onchange = "update_Damage_Table()" id = "damage_Table_Extra_Critical_Damage_Input_Box">
+						<input class = "input_Number_Box" type = "number" step = "any" value = 0 id = "damage_Table_Extra_Critical_Damage_Input_Box">
 						<br>
 						Critical Bonus
 					</th>
@@ -1177,7 +1177,7 @@
 
 			function update_Damage_Table()
 			{
-				if(damage_Table_Great_Weapon_Master_Radio_Button_Element.checked == true)
+				if(damage_Table_Great_Weapon_Master_Radio_Button_Element.checked === true)
 				{
 					damage_Table_D4_Average_Damage_Contribution_Element.innerHTML = Math.round((Number(damage_Table_D4_Input_Box_Element.value) * 3.0) * 10000) / 10000;
 					damage_Table_D6_Average_Damage_Contribution_Element.innerHTML = Math.round((Number(damage_Table_D6_Input_Box_Element.value) * 4.1666666667) * 10000) / 10000;
@@ -1189,7 +1189,7 @@
 					damage_Table_Total_Average_Damage_Regular_Hit_Element.innerHTML = Math.round(((Number(damage_Table_D4_Input_Box_Element.value) * 3.0 + Number(damage_Table_D6_Input_Box_Element.value) * 4.1666666667 + Number(damage_Table_D8_Input_Box_Element.value) * 5.25 + Number(damage_Table_D10_Input_Box_Element.value) * 6.3 + Number(damage_Table_D12_Input_Box_Element.value) * 7.3333333333) + Number(damage_Table_Damage_Modifer_Input_Box_Element.value)) * 10000) / 10000;
 					damage_Table_Total_Average_Damage_Critical_Hit_Element.innerHTML = Math.round((((Number(damage_Table_D4_Input_Box_Element.value) * 3.0 + Number(damage_Table_D6_Input_Box_Element.value) * 4.1666666667 + Number(damage_Table_D8_Input_Box_Element.value) * 5.25 + Number(damage_Table_D10_Input_Box_Element.value) * 6.3 + Number(damage_Table_D12_Input_Box_Element.value) * 7.3333333333)) * 2.0 + Number(damage_Table_Damage_Modifer_Input_Box_Element.value) + Number(damage_Table_Extra_Critical_Damage_Input_Box_Element.value)) * 10000) / 10000;
 				}
-				else if(damage_Table_Elemental_Adept_Radio_Button_Element.checked == true)
+				else if(damage_Table_Elemental_Adept_Radio_Button_Element.checked === true)
 				{
 					damage_Table_D4_Average_Damage_Contribution_Element.innerHTML = Math.round((Number(damage_Table_D4_Input_Box_Element.value) * 2.75) * 10000) / 10000;
 					damage_Table_D6_Average_Damage_Contribution_Element.innerHTML = Math.round((Number(damage_Table_D6_Input_Box_Element.value) * 3.6666666667) * 10000) / 10000;
