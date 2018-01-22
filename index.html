@@ -283,22 +283,22 @@
 	</head>
 	<body onload = "initialize_Page()">
 		<div>
-			<div>
-				<span class = "universal_Display_Options_Holder">
+			<div style = "width: 1066px">
+				<span class = "universal_Display_Options_Holder" onchange = "populate_All_Tables()">
 					<div>
-						<span class = "input_Descriptor">Target AC Minimum: </span><input class = "input_Number_Box" type = "number" step = "1" value = 13 onchange = "populate_All_Tables()" id = "target_AC_Minimum_Input">
+						<span class = "input_Descriptor">Target AC Minimum: </span><input class = "input_Number_Box" type = "number" step = "1" value = 13 id = "target_AC_Minimum_Input">
 					</div>
 					<div>
-						<span class = "input_Descriptor">Target AC Maximum: </span><input class = "input_Number_Box" type = "number" step = "1" value = 22 onchange = "populate_All_Tables()" id = "target_AC_Maximum_Input">
+						<span class = "input_Descriptor">Target AC Maximum: </span><input class = "input_Number_Box" type = "number" step = "1" value = 22 id = "target_AC_Maximum_Input">
 					</div>
 					<div>
-						<span class = "input_Descriptor">Display Disadvantage: </span><input class = "input_Checkbox" type = "checkbox" onkeypress = "key_Pressed_On_Checkbox(event, this)" onchange = "populate_All_Tables()" checked id = "display_Disadvantage_Checkbox">
+						<span class = "input_Descriptor">Display Disadvantage: </span><input class = "input_Checkbox" type = "checkbox" onkeypress = "key_Pressed_On_Checkbox(event, this)" checked id = "display_Disadvantage_Checkbox">
 					</div>
 					<div>
-						<span class = "input_Descriptor">Display Regular: </span><input class = "input_Checkbox" type = "checkbox" onkeypress = "key_Pressed_On_Checkbox(event, this)" onchange = "populate_All_Tables()" checked id = "display_Regular_Checkbox">
+						<span class = "input_Descriptor">Display Regular: </span><input class = "input_Checkbox" type = "checkbox" onkeypress = "key_Pressed_On_Checkbox(event, this)" checked id = "display_Regular_Checkbox">
 					</div>
 					<div>
-						<span class = "input_Descriptor">Display Advantage: </span><input class = "input_Checkbox" type = "checkbox" onkeypress = "key_Pressed_On_Checkbox(event, this)" onchange = "populate_All_Tables()" checked id = "display_Advantage_Checkbox">
+						<span class = "input_Descriptor">Display Advantage: </span><input class = "input_Checkbox" type = "checkbox" onkeypress = "key_Pressed_On_Checkbox(event, this)" checked id = "display_Advantage_Checkbox">
 					</div>
 				</span>
 				<span class = "drop_Down_Menu_Holder">
@@ -306,7 +306,7 @@
 						<span class = "saved_Entries_Drop_Down_List_Description">Saved Entries: </span><select class = "drop_Down_List" id = "saved_Entries_Drop_Down_List"></select>
 					</div>
 					<div>
-						<input class = "drop_Down_List_Button" type = "button" value = "Add Selected Table" onclick = "load_From_Local_Storage()">
+						<input class = "drop_Down_List_Button" type = "button" value = "Create Selected Table" onclick = "load_From_Local_Storage()">
 					</div>
 					<div>
 						<input class = "drop_Down_List_Button" type = "button" value = "Delete Selected Entry" onclick = "delete_From_Local_Storage()"><br>
@@ -331,7 +331,7 @@
 				</span>
 			</div>
 			<div>
-				<input class = "other_Button" type = "button" value = "Create New Table" onclick = "generate_New_Input()"><input class = "other_Button" type = "button" value = "Remove Last Table" onclick = "remove_Table('Last')">
+				<input class = "other_Button" type = "button" value = "Create New Table" onclick = "generate_New_Input()">
 			</div>
 		</div>
 		<br>
@@ -697,7 +697,8 @@
 
 			var table_Holder = document.getElementById("table_Holder");
 			var currently_Active_Tables = [];
-			var table_Strings_Array =	//Annoying HTML array for table elements, used in conjunction with descriptions and inputs to give appropriate IDs and values for new tables
+			var rebuild_First_Table_Descriptions = true;	//Used to tell if the first table has been removed and needs display information added
+			var table_Strings_Array =	//HTML content array for table elements, used in conjunction with descriptions and inputs to give appropriate IDs and values for new tables
 			[
 				'<span class = "full_Table"><span onchange = "populate_Table(',																//[] + Table number
 				')">',																														//[] + Description
@@ -748,7 +749,7 @@
 				'"><br></span><table id = "display_Table_Element_',																			//[] + Table number
 				'"></table></span>'																											//[]
 			];
-			var first_Table_Descriptions_Array =	//Continued annoying HTML array for the element descriptions
+			var first_Table_Descriptions_Array =	//HTML content array for the element descriptions
 			[
 				'<span class = "input_Descriptor"></span>',
 				'<span class = "input_Descriptor">Name: </span>',
@@ -952,30 +953,14 @@
 				}
 			}
 
-			var rebuild_First_Table_Descriptions = true;	//Used to tell if the first table has been removed and needs display information added
-
 			function remove_Table(table_To_Remove)
 			{
-				if(currently_Active_Tables.length >= 1)
+				if(currently_Active_Tables.length >= 1 && table_To_Remove === currently_Active_Tables[0])
 				{
-					if(currently_Active_Tables.length === 1 || table_To_Remove === currently_Active_Tables[0])
-					{
-						rebuild_First_Table_Descriptions = true;
-					}
+					rebuild_First_Table_Descriptions = true;
 				}
-				if(table_To_Remove === "Last")
-				{
-					if(currently_Active_Tables.length >= 1)
-					{
-						document.getElementById("display_Table_Element_" + currently_Active_Tables[currently_Active_Tables.length - 1]).parentElement.parentElement.removeChild(document.getElementById("display_Table_Element_" + currently_Active_Tables[currently_Active_Tables.length - 1]).parentElement);	//Ugly parent traversal to remove one's self for more browser support
-						currently_Active_Tables.splice(currently_Active_Tables.length - 1, 1);
-					}
-				}
-				else
-				{
-					document.getElementById("display_Table_Element_" + table_To_Remove).parentElement.parentElement.removeChild(document.getElementById("display_Table_Element_" + table_To_Remove).parentElement);
-					currently_Active_Tables.splice(currently_Active_Tables.indexOf(table_To_Remove), 1);
-				}
+				document.getElementById("display_Table_Element_" + table_To_Remove).parentElement.parentElement.removeChild(document.getElementById("display_Table_Element_" + table_To_Remove).parentElement);
+				currently_Active_Tables.splice(currently_Active_Tables.indexOf(table_To_Remove), 1);
 
 				if(rebuild_First_Table_Descriptions === true && currently_Active_Tables.length >= 1)
 				{
@@ -1011,7 +996,7 @@
 				if(example_Tables_Element.value !== "")
 				{
 					var new_Input_Array = JSON.parse(example_Tables_Element.value);
-					generate_New_Input(new_Input_Array[0], new_Input_Array[1], new_Input_Array[2], new_Input_Array[3], new_Input_Array[4], new_Input_Array[5], new_Input_Array[6], new_Input_Array[7], new_Input_Array[8], new_Input_Array[9]);
+					generate_New_Input(new_Input_Array[0], new_Input_Array[1], new_Input_Array[2], new_Input_Array[3], new_Input_Array[4], new_Input_Array[5], new_Input_Array[6], new_Input_Array[7], new_Input_Array[8], new_Input_Array[9], new_Input_Array[10], new_Input_Array[11], new_Input_Array[12]);
 				}
 			}
 
@@ -1106,7 +1091,7 @@
 				var item_Number_In_Local_Storage = saved_Entries_Element.value;
 				if(check_Local_Storage_Availability() === true && item_Number_In_Local_Storage !== "")
 				{
-					if(window.confirm("Click 'OK' to delete item " + saved_Entries_Element.childNodes[item_Number_In_Local_Storage].innerHTML + " from the saved entries.") === true)	//Maybe to do: use something other than the confirmation box
+					if(window.confirm("Click 'OK' to delete item '" + saved_Entries_Element.childNodes[item_Number_In_Local_Storage].innerHTML + "' from the saved entries.") === true)	//Maybe to do: use something other than the confirmation box
 					{
 						var new_Saved_Entries_Array = JSON.parse(window.localStorage.getItem("saved_Entries"));
 						new_Saved_Entries_Array.splice(item_Number_In_Local_Storage, 1);
