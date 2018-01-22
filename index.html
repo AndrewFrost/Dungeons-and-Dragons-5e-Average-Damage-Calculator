@@ -252,9 +252,6 @@
 			{
 				display: inline-block;
 				white-space: nowrap;
-				border-radius: 4px;
-				padding-left: 5px;
-				padding-right: 5px;
 				background-color: rgba(0, 0, 0, 0.5);
 			}
 
@@ -913,13 +910,13 @@
 				{
 					new_Table_Holder_Width = 104.01667;
 				}
-				//Zooming out in Firefox and Chrome produces inconsistent table widths, causing tables to wrap to the next line
+				//Zooming out in Firefox and Chrome produces inconsistent table widths, which can cause tables to wrap to the next line if there's not enough space
 				//Table widths at minimum zoom in each browser:
 				//Chrome: 3- 316;	Firefox: 3- 319.333;	Internet Explorer: 310
 				//Chrome: 2- 212;	Firefox: 2- 214;		Internet Explorer: 207
 				//Chrome: 1- 110;	Firefox: 1- 108.6833;	Internet Explorer: 104
 				//Chrome + 6/5/6;	Firefox + 9.333/7/4.6833;
-				new_Table_Holder_Width = ((new_Table_Holder_Width + 9.333) * (currently_Active_Tables.length - 1)) + 413;	//Remove +9.333 if zooming out issue is resolved; currently allows user to continue scrolling past last table in standard zooms
+				new_Table_Holder_Width = ((new_Table_Holder_Width + 9.333) * (currently_Active_Tables.length - 1)) + 413;	//Remove +9.333 if zooming out issue is resolved; current set up allows user to continue scrolling past last table in standard zooms
 				table_Holder.style.width = String(new_Table_Holder_Width) + "px";
 			}
 
